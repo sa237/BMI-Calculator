@@ -1,4 +1,4 @@
-# bmicalculatorapp
+# BMICalculatorApp
 
 A new Flutter application.
 
