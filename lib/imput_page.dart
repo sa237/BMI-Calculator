@@ -188,12 +188,13 @@ class _InputPageState extends State<InputPage> {
             ),
             GestureDetector(
               onTap: (){
-                //CalculateBrain calc = CalculateBrain(height: height,weight: weight);
+                CalculateBrain calc = CalculateBrain(height: height,weight: weight);
                 Navigator.push(context, MaterialPageRoute(builder: (context){
                   return ResultPage(
-                    resultText: CalculateBrain(height: height,weight: weight).returnResult(),
-                    interpretationText: CalculateBrain(height: height,weight: weight).returnMessage(),
-                    bmiResult:  CalculateBrain(height: height,weight: weight).calculateBMI(),
+                    bmiResult:  calc.calculateBMI(),
+                    resultText: calc.returnResult(),
+                    interpretationText: calc.returnMessage(),
+                    
                   );
                 },),);
               },
